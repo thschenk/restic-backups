@@ -1,0 +1,12 @@
+version: '2'
+services:
+  backup:
+    image: "backup"
+    volumes:
+      - ./config.json:/app/config.json:ro
+      - cache:/cache
+      - /path/to/myvolume:/volumes/myvolume:ro
+    build: "."
+
+volumes:
+  cache:

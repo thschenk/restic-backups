@@ -1,0 +1,27 @@
+{
+  "volumes": [
+    {
+      "id": "myvolume",
+      "local": "/volumes/myvolume",
+      "remote": "gs:my-unique-bucket-name:/myvolume",
+      "password": " -- encryption key used by restic -- ",
+      "google_project_id": 123,
+      "google_key": "my-service-account",
+      "exclude": ["foo", "*.bar"]
+    }
+  ],
+  "google_keys": {
+    "my-service-account": {
+      "type": "service_account",
+      "project_id": "xxx",
+      "private_key_id": "xxx",
+      "private_key": "-----BEGIN PRIVATE KEY-----\nprivate key\n-----END PRIVATE KEY-----\n",
+      "client_email": "service-account@project.iam.gserviceaccount.com",
+      "client_id": "1234",
+      "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+      "token_uri": "https://oauth2.googleapis.com/token",
+      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+      "client_x509_cert_url": "xxx"
+    }
+  }
+}
